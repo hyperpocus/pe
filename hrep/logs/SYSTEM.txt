@@ -1,0 +1,34 @@
+Errore con inizio alla riga : 1 nel comando -
+create user hrep identified by hrep
+
+GRANT
+    CREATE SESSION,
+    CREATE VIEW,
+    ALTER SESSION,
+    CREATE SEQUENCE
+TO hrep
+Report error -
+ORA-00933: comando SQL terminato erroneamente
+00933. 00000 -  "SQL command not properly ended"
+*Cause:    
+*Action:
+Errore con inizio alla riga : 10 nel comando -
+GRANT
+    CREATE SYNONYM,
+    CREATE DATABASE LINK, resource,
+    UNLIMITED TABLESPACE
+TO hrep
+Report error -
+ORA-01917: l'utente o il ruolo 'HREP' non esiste
+01917. 00000 -  "user or role '%s' does not exist"
+*Cause:    There is not a user or role by that name.
+*Action:   Re-specify the name.
+
+Creato user HREP.
+
+
+Grant riuscito/a.
+
+
+Grant riuscito/a.
+
