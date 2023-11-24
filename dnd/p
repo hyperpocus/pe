@@ -1,0 +1,148 @@
+************************************************************
+*************************************************
+******************************************
+*************************************
+*********************************
+*****************************
+***************************
+
+
+
+CORTECCIA
+ELFO DEI BOSCHI 
+LADRO
+
+
+ATTRIBUTO			VALORE			DADO VITA			
+PERCEZIONE PASSIVA	13									
+VELOCITA			9
+VITA				9(1*dado8+cos) 	*1
+
+
+
+CARATTERISTCHE							MODIFICATORE	TIRO PER COLPIRE
+-----------------------------------------------------------------------------
+DESTREZZA 		(DES)		c16+raz2 	(+4)			ARCO	=>	c4 +comp2
+SAGGEZZA 		(SAG)		c16+raz1 	(+3)			
+INTELLIGENZA 	(INT)		c14			(+2)			
+COSTITUZIONE 	(COS)		c13			(+1)			
+FORZA 			(FOR)		c11 		(+0)			
+CARISMA 		(CAR)		c11			(+0)			
+
+
+ABILITA								COMPETENZA(4)		MAESTRO(2)
+------------------------------------------------------------------------------
+acrobazia			(		(DES)	X				
+furtività 			(6)		(DES)	O					O
+rapidità di mano	(		(DES)	O				
+percezione					(SAG)	X					X
+intuizione					(SAG)   X
+indagare					(INT)	X
+intrattenere				(CAR)
+atletica					(FOR)
+persuoasione				(CAR)
+inganno						(CAR)	
+indimidire					(CAR)
+
+BACKGROUND
+-------------------------------------------------------------------------------
+monello								COMPETENZA		MAESTRO		ABILITA	
+furtività							X					
+rapidità mano						X
+(inv)arnesi da scasso				X+(2*DES)					Quando usi rapidità di mano				
+(inv)trucchi da camuffamento		X+(2*CAR)					Quando usi ingammo
+segreti dei cittadini											Velocità 18mt
+
+
+INVENTARIO
+------------------------------------------
+DOTAZIONE SCASSINATORE:
+	OGGETTO: ARNESI DA SCASSO 
+		SCASSINARE
+		,TRAPPOLE
+		COMPETENZA[]
+		MAESTRIA[]
+------------------------------------------
+	OGGETTO: 	ARCO CORTO
+		25 oro
+		DANNO 	d6	perforante
+------------------------------------------
+	OGGETTO:	STOCCO
+		25 oro
+		Accurata(DES) OR (FOR)
+		DANNO	d8	perforante
+------------------------------------------
+	OGGETTO: 	FRECCE(20)
+		1* oro
+		DANNO		perforante
+------------------------------------------
+	OGGETTO: ARMATURA CUOIO
+		10 oro
+		DIFESA 11+(DES)
+------------------------------------------
+	OGGETTO: PUGNALE
+		2 oro
+		DANNO	d4	perforante
+------------------------------------------
+	OGGETTO: 	PUGNALE
+		2 oro
+		DANNO	d4	perforante
+------------------------------------------
+
+
+
+
+
+
+
+	
+
+INSERT INTO CARATTERISTICHE (CARATTERISTICHE_ID,NOME,VALORE,MODIFICATORE_DI_CARATTERISTICA,MODOFICATORE DI RAZZA) VALUES (1,DESTREZZA,14,4,2
+
+CREATE TABLE CARATTERISTICHE (
+	CARATTERISTICHE_ID PRIMARY KEY
+	,VALORE
+	,MODIFICATORE_DI_CARATTERISTICA
+	,MODIFICATORE_DI_RAZZA
+	
+	
+
+
+TIRI SALVEZZA	
+	DES			+2
+	INT			+2
+	
+
+CREATE TABLE ABILITA
+		ABILITA_ID PRIMARY KEY
+		,
+
+;
+
+--------------------------------------------------------------------
+MAESTRO DI GILDA
+intuizione
+persuasione
+1 linguaggio
+competenza strumenti artigiano
+strumenti da artigiano
+lettera presentazione gilda[CARROZZAIO | PELLAI | VASAI |...]
+abito
+15 monete
+
+criminale
+furtività
+inganno
+arnesi scasso
+gioco 
+contatto criminale/spia
+
+viandante
+atletica for
+sopravvivenza SAG
+[viandate]
+1 linguaggio bonus
+1 strumento musicale
+sopravvivenza x 5 persone
+
+
