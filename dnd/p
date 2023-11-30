@@ -7,14 +7,34 @@
 ***************************
 
 
+create TABLE	Character
+	ID PRIMARY KEY
+	,NOME		varchar2
+	,RAZZA		varchar2
+	,DES		number
+	,SAG		number
+	,INT		number
+	,COS		number
+	,CAR		number
+	,FOR		number
+	,VITA		number
+	,VELOCITA	number
+	,PERC_PASS	number
+	,INVENTARIO	number
+;
 
-CORTECCIA
-ELFO DEI BOSCHI 
-LADRO
+
+select * from character where 
 
 
-ATTRIBUTO			VALORE			DADO VITA			
-PERCEZIONE PASSIVA	13									
+
+
+[CORTECCIA][ELFO DEI BOSCHI][LADRO]
+
+ATTRIBUTI
+-----------------------------------------------------------------------------
+ATTRIBUTO			VALORE			DADO VITA
+PERCEZIONE PASSIVA	13			
 VELOCITA			9
 VITA				9(1*dado8+cos) 	*1
 
@@ -22,26 +42,26 @@ VITA				9(1*dado8+cos) 	*1
 
 CARATTERISTCHE							MODIFICATORE	TIRO PER COLPIRE
 -----------------------------------------------------------------------------
-DESTREZZA 		(DES)		c16+raz2 	(+4)			ARCO	=>	c4 +comp2
-SAGGEZZA 		(SAG)		c16+raz1 	(+3)			
-INTELLIGENZA 	(INT)		c14			(+2)			
-COSTITUZIONE 	(COS)		c13			(+1)			
-FORZA 			(FOR)		c11 		(+0)			
-CARISMA 		(CAR)		c11			(+0)			
+DESTREZZA		(DES)	c16+raz2	(+4)			ARCO	=>	c4 +comp2
+SAGGEZZA		(SAG)	c16+raz1	(+3)
+INTELLIGENZA	(INT)	c14			(+2)
+COSTITUZIONE	(COS)	c13			(+1)
+FORZA			(FOR)	c11			(+0)
+CARISMA			(CAR)	c11			(+0)
 
 
 ABILITA								COMPETENZA(4)		MAESTRO(2)
 ------------------------------------------------------------------------------
-acrobazia			(		(DES)	X				
-furtività 			(6)		(DES)	O					O
-rapidità di mano	(		(DES)	O				
-percezione					(SAG)	X					X
-intuizione					(SAG)   X
-indagare					(INT)	X
+acrobazia			(		(DES)	X						
+furtività			(6)		(DES)	O					O	
+rapidità di mano	(		(DES)	O						
+percezione					(SAG)	X					X	
+intuizione					(SAG)	X	
+indagare					(INT)	X	
 intrattenere				(CAR)
 atletica					(FOR)
 persuoasione				(CAR)
-inganno						(CAR)	
+inganno						(CAR)
 indimidire					(CAR)
 
 BACKGROUND
@@ -51,7 +71,7 @@ furtività							X
 rapidità mano						X
 (inv)arnesi da scasso				X+(2*DES)					Quando usi rapidità di mano				
 (inv)trucchi da camuffamento		X+(2*CAR)					Quando usi ingammo
-segreti dei cittadini											Velocità 18mt
+segreti dei cittadini											Velocità +9mt in città
 
 
 INVENTARIO
