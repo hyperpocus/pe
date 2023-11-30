@@ -8,23 +8,23 @@
 
 
 create TABLE	Character
-	ID PRIMARY KEY
-	,NOME		varchar2
-	,RAZZA		varchar2
-	,DES		number
-	,SAG		number
-	,INT		number
-	,COS		number
-	,CAR		number
-	,FOR		number
-	,VITA		number
-	,VELOCITA	number
-	,PERC_PASS	number
-	,INVENTARIO	number
+	(
+		ID PRIMARY KEY
+		,NOME		varchar2
+		,RAZZA		varchar2
+		,DES		number
+		,SAG		number
+		,INT		number
+		,COS		number
+		,CAR		number
+		,FOR		number
+		,VITA		number
+		,VELOCITA	number
+		,PERC_PASS	number
+		,INVENTARIO	number
+	)
 ;
 
-
-select * from character where 
 
 
 
@@ -36,11 +36,11 @@ ATTRIBUTI
 ATTRIBUTO			VALORE			DADO VITA
 PERCEZIONE PASSIVA	13			
 VELOCITA			9
-VITA				9(1*dado8+cos) 	*1
+VITA				9(1*dado8+cos)	*1
 
 
 
-CARATTERISTCHE							MODIFICATORE	TIRO PER COLPIRE
+CARATTERISTCHE						MODIFICATORE	TIRO PER COLPIRE
 -----------------------------------------------------------------------------
 DESTREZZA		(DES)	c16+raz2	(+4)			ARCO	=>	c4 +comp2
 SAGGEZZA		(SAG)	c16+raz1	(+3)
@@ -52,26 +52,26 @@ CARISMA			(CAR)	c11			(+0)
 
 ABILITA								COMPETENZA(4)		MAESTRO(2)
 ------------------------------------------------------------------------------
-acrobazia			(		(DES)	X						
+acrobazia			()		(DES)	X						
 furtività			(6)		(DES)	O					O	
-rapidità di mano	(		(DES)	O						
-percezione					(SAG)	X					X	
-intuizione					(SAG)	X	
-indagare					(INT)	X	
-intrattenere				(CAR)
-atletica					(FOR)
-persuoasione				(CAR)
-inganno						(CAR)
-indimidire					(CAR)
+rapidità di mano	()		(SAG)	O					O	
+percezione			()		(SAG)	X
+intuizione			()		(SAG)	X
+indagare			()		(INT)	X
+intrattenere		()		(CAR)
+atletica			()		(FOR)
+persuoasione		()		(CAR)
+inganno				()		(CAR)
+indimidire			()		(CAR)
 
 BACKGROUND
 -------------------------------------------------------------------------------
-monello								COMPETENZA		MAESTRO		ABILITA	
-furtività							X					
-rapidità mano						X
-(inv)arnesi da scasso				X+(2*DES)					Quando usi rapidità di mano				
-(inv)trucchi da camuffamento		X+(2*CAR)					Quando usi ingammo
-segreti dei cittadini											Velocità +9mt in città
+MONELLO							COMPETENZA		MAESTRO		ABILITA	
+furtività						X
+rapidità mano					X
+(inv)arnesi da scasso			X+(2*DES)					Quando usi rapidità di mano				
+(inv)trucchi da camuffamento	X+(2*CAR)					Quando usi ingammo
+segreti dei cittadini										Velocità +9mt in città
 
 
 INVENTARIO
@@ -108,6 +108,9 @@ DOTAZIONE SCASSINATORE:
 		2 oro
 		DANNO	d4	perforante
 ------------------------------------------
+TIRI SALVEZZA	
+	DES			+2
+	INT			+2
 
 
 
@@ -115,7 +118,7 @@ DOTAZIONE SCASSINATORE:
 
 
 
-	
+
 
 INSERT INTO CARATTERISTICHE (CARATTERISTICHE_ID,NOME,VALORE,MODIFICATORE_DI_CARATTERISTICA,MODOFICATORE DI RAZZA) VALUES (1,DESTREZZA,14,4,2
 
@@ -128,9 +131,6 @@ CREATE TABLE CARATTERISTICHE (
 	
 
 
-TIRI SALVEZZA	
-	DES			+2
-	INT			+2
 	
 
 CREATE TABLE ABILITA
